@@ -4,64 +4,12 @@
     <title>Portfolio</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="global.css">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
     <style>
 
-        /* Google Fonts import */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-        * {
-            font-family: "Roboto", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .roboto-bold {
-            font-family: "Roboto", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        .merriweather-bold {
-            font-family: "Merriweather", serif;
-            font-weight: 700;
-            font-style: normal;
-        }
-        
-        .caveat-tagline {
-            font-family: "Caveat", cursive;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-        }
-
-        .light-black {
-            color: #373737;
-        }
-
-        .width-format {
-            width: 70vw;
-        }
-
-        .store-name {
-            color:#3b3b3b;
-            padding-left: 0px;
-            padding-right: 0px
-        }
-
-        .nav-style {
-            border: none; 
-            /* background: #fff1e5; */
-        }
-
-        .nav > li > a:hover{
-            background-color: #ffceb7;
-        }
-        
         .banner {
             width: 70vw;
             min-height: 100px;
@@ -133,7 +81,7 @@
 
 <body data-spy="scroll" data-target=".navbar" >
 
-    <nav class="navbar navbar-custom nav-style" >
+    <nav class="navbar nav-style" >
         <div class="container-fluid width-format">
             <div class="navbar-header">
                 <a href="#" class="navbar-brand roboto-bold store-name">SampleName</a>
