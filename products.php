@@ -61,6 +61,7 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
         </div>
 
         <div class='card custom-card' >
@@ -69,6 +70,7 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
         </div>
 
         <div class='card custom-card' >
@@ -77,6 +79,7 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
         </div>
         
     </div>
@@ -90,6 +93,7 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
         </div>
         
         <div class='card custom-card' >
@@ -107,6 +111,7 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
         </div>
 
         <div class='card custom-card' >
@@ -115,6 +120,7 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
         </div>
     </div>
     
