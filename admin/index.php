@@ -16,6 +16,10 @@
             text-align: center;
         }
 
+        th, td {
+            padding: 10px;
+        }
+
         center {
             margin-bottom: 30px;
         }

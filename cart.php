@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<?php session_start(); ?>
 <html lang="en">
 <head>
     <title>Cart</title>
@@ -83,7 +85,7 @@
     <nav class="navbar nav-style navbar-fixed-top" >
         <div class="container-fluid width-format" >
             <div class="navbar-header">
-                <a href="#" class="navbar-brand roboto-bold store-name">SampleName</a>
+                <a href="#" class="navbar-brand roboto-bold store-name">TastySlices</a>
             </div>
 
             <ul class="nav navbar-nav navbar-right">
@@ -99,7 +101,9 @@
 
     <div class="cart-list width-format">
 
-        <div class="cart-card">
+        <?php showCartItems(); ?>
+
+        <!-- <div class="cart-card">
 
             <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
 
@@ -172,16 +176,16 @@
                 <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
                 
                 <p class="price" >PHP 21.50</p>
-            </div>
+            </div> 
 
 
-        </div>
+        </div> -->
 
     </div>
 
     <footer class="roboto-bold " >
         
-        <p class="roboto-bold " style="font-size: 2em;" >Sub Total: 100,000</p>
+        <p class="roboto-bold " style="font-size: 2em;" >Sub Total: <?php addTotal(); ?></p>
 
         <button class="btn btn-success" >Checkout</button>
 
@@ -189,3 +193,75 @@
     
 </body>
 </html>
+
+<?php
+
+    function showCartItems() {
+
+        include("includes/sqlconnection.php");
+        
+        if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+            foreach ($_SESSION['cart'] as $id) {
+                
+                $sql = "SELECT * FROM products WHERE id='$id'";
+                $result = $conn->query($sql);
+
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()) {
+
+                        echo "
+                            <div class='cart-card'>
+                                <img class='card-img' src='images/$row[pic]' alt='' >
+                    
+                                <div class='content-wrapper'>
+                                    <p class='card-content' >$row[description]</p>
+                                    
+                                    <p class='price' >PHP $row[price]</p>
+                                </div>
+                            </div>
+                        ";
+                    }
+                } else {
+                    echo "<div></div>";
+                }
+            }
+
+        } else {
+            echo "Cart is empty.";
+        }
+
+        $conn->close();
+   
+    }
+
+    function addTotal(){
+        include("includes/sqlconnection.php");
+        
+        if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+
+            $total = 0;
+
+            foreach ($_SESSION['cart'] as $id) {
+                
+                $sql = "SELECT * FROM products WHERE id='$id'";
+                $result = $conn->query($sql);
+
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()) {
+                        $total += $row['price'];
+                    }
+                }
+
+            }
+
+            echo $total;
+
+        } else {
+            echo "Cart is empty.";
+        }
+
+        $conn->close();
+   
+    }
+
+?>
