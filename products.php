@@ -36,7 +36,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-custom nav-style navbar-fixed-top" >
+    <nav class="navbar nav-style navbar-fixed-top" >
         <div class="container-fluid width-format">
             <div class="navbar-header">
                 <a href="#" class="navbar-brand roboto-bold store-name">SampleName</a>
