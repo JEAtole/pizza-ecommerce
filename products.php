@@ -131,6 +131,30 @@
     
 
 </body>
+<script>
+
+    addToCart = (id) => {
+        $(document).ready(function() {
+            $.ajax({
+                url: 'addtocart.php', // Path to your PHP file
+                type: 'POST', // Method used to send the data
+                data: { id: id }, // Data to be sent
+                success: function(response) {
+                    if(response == "success"){
+                        alert("Added to Cart!");
+                    } else {
+                        alert("Add to Cart Failed.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText); // Log any errors
+                }
+            });
+        });
+    }
+
+</script>
+
 </html>
 
 <?php
@@ -152,7 +176,7 @@
                         <h5 class='card-title'>$row[prodName]</h5>
                         <p class='card-text'>$row[description]</p>
                     </div>
-                    <button href='#' class='btn btn-primary'>Add to cart</button>
+                    <button onclick='addToCart($row[id])' class='btn btn-primary'>Add to cart</button>
                 </div>
                 ";
             }
@@ -183,7 +207,7 @@
                         <h5 class='card-title'>$row[prodName]</h5>
                         <p class='card-text'>$row[description]</p>
                     </div>
-                    <button href='#' class='btn btn-primary'>Add to cart</button>
+                    <button onclick='addToCart($row[id])' class='btn btn-primary'>Add to cart</button>
                 </div>
                 ";
             }
