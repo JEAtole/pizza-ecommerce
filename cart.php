@@ -103,84 +103,6 @@
 
         <?php showCartItems(); ?>
 
-        <!-- <div class="cart-card">
-
-            <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
-
-            <div class="content-wrapper">
-                <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
-                
-                <p class="price" >PHP 21.50</p>
-            </div>
-
-
-        </div>
-
-        <div class="cart-card">
-
-            <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
-
-            <div class="content-wrapper">
-                <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
-                
-                <p class="price" >PHP 21.50</p>
-            </div>
-
-
-        </div>
-
-        <div class="cart-card">
-
-            <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
-
-            <div class="content-wrapper">
-                <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
-                
-                <p class="price" >PHP 21.50</p>
-            </div>
-
-
-        </div>
-
-        <div class="cart-card">
-
-            <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
-
-            <div class="content-wrapper">
-                <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
-                
-                <p class="price" >PHP 21.50</p>
-            </div>
-
-
-        </div>
-
-        <div class="cart-card">
-
-            <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
-
-            <div class="content-wrapper">
-                <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
-                
-                <p class="price" >PHP 21.50</p>
-            </div>
-
-
-        </div>
-
-        <div class="cart-card">
-
-            <img class="card-img" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" >
-
-            <div class="content-wrapper">
-                <p class="card-content" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt, corporis dolores cum quisquam earum. Totam repudiandae omnis ad dignissimos, corporis obcaecati quibusdam maxime quos perspiciatis deserunt, magni rerum quidem.</p>
-                
-                <p class="price" >PHP 21.50</p>
-            </div> 
-
-
-        </div> -->
-
     </div>
 
     <footer class="roboto-bold " >
@@ -208,7 +130,7 @@
                                 <input type="text" class="form-control input-lg" placeholder="Contact No." >
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" style="font-size: 20px; color: gray;">Address..</textarea>
+                                <textarea class="form-control" rows="5" style="font-size: 20px; color: gray;" placeholder="Address..." ></textarea>
                             </div>
                         </form>
                     </div>
