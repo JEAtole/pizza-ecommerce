@@ -109,25 +109,11 @@
             </ul>
         </div>
     </nav>
+
+    <?php showProduct() ?>
+
     
-    <div class="product-profile width-format">
 
-        <?php displayProduct($_GET['id']); ?>    
-
-        <!-- <img class="product-image" src="images/pineapple.jpg" alt="">
-
-        <div class="product-information">
-            <h2>Pepperoni Pizza</h2>
-            <p style="font-size: 1.5em; margin: 0;" >25.6</p>
-
-            <button class="btn btn-primary" style="width:fit-content; margin-left:auto;" >Add to Cart</button>
-
-            <p class="description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quaerat quod nihil beatae explicabo ratione et. Nisi accusamus cumque doloremque voluptatibus. Harum officia, nam neque qui ex perspiciatis error optio.
-            </p>
-        </div> -->
-
-    </div>
 
     <br>
     <br>
@@ -193,33 +179,41 @@
 
 <?php
 
-    function displayProduct($id){
-
+    function showProduct() {
         include("includes/sqlconnection.php");
-        
-        $sql = "SELECT * FROM products WHERE id='$id'";
+
+        $productId = $_GET['id'];
+        $sql = "SELECT * FROM products WHERE id = $productId";
         $result = $conn->query($sql);
 
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()) {
-                
                 echo "
-                <img class='product-image' src='images/$row[pic]' alt=''>
-                <div class='product-information'>
-                    <h2>$row[prodName]</h2>
-                    <p style='font-size: 1.5em; margin: 0;' >25.6</p>
-                    <button onclick='addToCart($row[id])' class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
-                    <p class='description'>$row[description]</p>
+
+                <div class='product-profile width-format'>
+                    <img class='product-image' src='images/$row[pic]' alt=''>
+            
+                    <div class='product-information'>
+                        <h2>$row[prodName]</h2>
+                        <p style='font-size: 1.5em; margin: 0;' >$row[price]</p>
+            
+                        <button class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
+            
+                        <p class='description'>
+                            $row[description]
+                        </p>
+                    </div>
+            
                 </div>
                 ";
             }
-        } else {
-            echo "
-                <div></div>
-            ";
+        }
+        else {
+            echo "";
         }
 
         $conn->close();
+
     }
 
 ?>
