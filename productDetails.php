@@ -121,8 +121,10 @@
     <h2 class="width-format comment-header" >Comments</h2>
 
     <div class="add-comment-wrapper">
-        <textarea class=" width-format form-control textarea-comment " rows="3"></textarea>
-        <button class="btn btn-primary"  >Add Comment</button>
+        <form action="addComment.php" method="POST">
+            <textarea name="comment" class=" width-format form-control textarea-comment " rows="3"></textarea>
+            <button type="submit" class="btn btn-primary"  >Add Comment</button>
+        </form>    
     </div>
 
     <div class="comment-list">
@@ -150,6 +152,29 @@
 
 
 </body>
+<script>
+
+    addToCart = (id) => {
+        $(document).ready(function() {
+            $.ajax({
+                url: 'addtocart.php', // Path to your PHP file
+                type: 'POST', // Method used to send the data
+                data: { id: id }, // Data to be sent
+                success: function(response) {
+                    if(response == "success"){
+                        alert("Added to Cart!");
+                    } else {
+                        alert("Add to Cart Failed.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText); // Log any errors
+                }
+            });
+        });
+    }
+
+</script>
 </html>
 
 <?php
