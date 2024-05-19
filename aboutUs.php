@@ -60,7 +60,7 @@
         </div>
 
         <div class="dev-card">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/206/015/small/developer-working-icon-free-vector.jpg" alt="">
+            <img src="images/rmorales.jpg" alt="">
             <p class="roboto-bold" >Rolando Morales Jr</p>
         </div>
 
