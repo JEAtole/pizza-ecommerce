@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="global.css">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        .developers {
+            width: fit-content;
+            display: flex;
+            margin: 10px auto;
+            font-size: 2.8em;
+            font-style: italic;
+        }
+
+        .dev-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin: auto;
+            width: fit-content;
+        }
+
+        .dev-card {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+    </style>
+
 </head>
 <body>
     
@@ -25,7 +50,24 @@
         </div>
     </nav>
 
-    <p>About us</p>
+    <p class="developers merriweather-bold" style="margin-top: 70px;" >Developers</p>
+
+    <div class="dev-wrapper">
+
+        <div class="dev-card">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/206/015/small/developer-working-icon-free-vector.jpg" alt="">
+            <p class="roboto-bold" >Jhan Ellen Atole</p>
+        </div>
+
+        <div class="dev-card">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/206/015/small/developer-working-icon-free-vector.jpg" alt="">
+            <p class="roboto-bold" >Rolando Morales Jr</p>
+        </div>
+
+    </div>
+
+    
+
 
 </body>
 </html>

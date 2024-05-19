@@ -58,6 +58,13 @@
             font-style: italic;
         }
 
+        .card-body {
+            display:flex;
+            flex-direction: column;
+            height: 150px;
+            overflow: auto;
+        }
+
         
     </style>
 
