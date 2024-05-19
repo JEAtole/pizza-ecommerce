@@ -66,8 +66,8 @@
                     <input class='form-control' type='text' name='prodName' value='$row[prodName]' required> <br/>
                     <textarea class='form-control' rows='4' name='description' required>$row[description]</textarea> <br/>
                     <input class='form-control' type='number' name='price' value='$row[price]' step='0.01' required> <br/>
-                    <input class='form-control' type='hidden' name='pic' value='$row[pic]'>
-                    <input class='form-control' type='file' name='pic' required> <br/>
+                    <input class='form-control' type='hidden' name='pic_old' value='$row[pic]'>
+                    <input class='form-control' type='file' name='pic'> <br/>
                 ";
             }
         } else {
