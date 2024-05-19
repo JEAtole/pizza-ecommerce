@@ -66,9 +66,32 @@
                     <input class='form-control' type='text' name='prodName' value='$row[prodName]' required> <br/>
                     <textarea class='form-control' rows='4' name='description' required>$row[description]</textarea> <br/>
                     <input class='form-control' type='number' name='price' value='$row[price]' step='0.01' required> <br/>
+                    ";
+                
+                if($row['isFeatured'] == 1){
+                    echo "
+                    <div class='text-left'>
+                        <span for='isFeatured'>&nbsp;&nbsp;IsFeatured?&nbsp;&nbsp;</span>
+                        <input type='radio' name='isFeatured' value='1' checked required>True&nbsp;&nbsp;
+                        <input type='radio' name='isFeatured' value='0'>False&nbsp;&nbsp;
+                    </div> <br/>
+                    ";
+                } else {
+                    echo "
+                    <div class='text-left'>
+                        <span for='isFeatured'>&nbsp;&nbsp;IsFeatured?&nbsp;&nbsp;</span>
+                        <input type='radio' name='isFeatured' value='1' required>True&nbsp;&nbsp;
+                        <input type='radio' name='isFeatured' value='0' checked>False&nbsp;&nbsp;
+                    </div> <br/>
+                    ";
+                }
+                
+                echo "
                     <input class='form-control' type='hidden' name='pic_old' value='$row[pic]'>
                     <input class='form-control' type='file' name='pic'> <br/>
-                ";
+                    ";
+                    
+                
             }
         } else {
             echo "No Record Found";

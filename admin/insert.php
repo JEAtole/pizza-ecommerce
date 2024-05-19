@@ -8,10 +8,11 @@
         $prodName = $_POST['prodName'];
         $description = $_POST['description'];
         $price = $_POST['price'];
+        $isFeatured = $_POST['isFeatured'];
         $pic = $_FILES['pic']['name'];
 
-        $sql = "INSERT INTO products(prodName, description, price, pic)
-            VALUES('$prodName', '$description', '$price', '$pic')";
+        $sql = "INSERT INTO products(prodName, description, price, isFeatured, pic)
+            VALUES('$prodName', '$description', '$price', $isFeatured, '$pic')";
 
         if($conn->query($sql)===TRUE){
             move_uploaded_file($_FILES['pic']["tmp_name"],"../images/".$_FILES['pic']['name']);  
