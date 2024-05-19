@@ -44,9 +44,28 @@
 
 .nav-style {
     border: none; 
-    /* background: #fff1e5; */
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .nav > li > a:hover{
     background-color: #ffceb7;
+}
+
+.custom-card {
+    width: 33.33%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-containers {
+    display:flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 20px;
+    width: 55vw;
+}
+
+.card-img {
+    width:100%;
 }
