@@ -85,7 +85,7 @@
     <nav class="navbar nav-style navbar-fixed-top" >
         <div class="container-fluid width-format" >
             <div class="navbar-header">
-                <a href="#" class="navbar-brand roboto-bold store-name">SampleName</a>
+                <a href="#" class="navbar-brand roboto-bold store-name">TastySlices</a>
             </div>
 
             <ul class="nav navbar-nav navbar-right">
