@@ -30,6 +30,11 @@
             font-size: 1.5em;
         }
 
+        .profile-pic {
+            width: 250px;
+            height: 250px
+        }
+
     </style>
 
 </head>
@@ -55,12 +60,13 @@
     <div class="dev-wrapper">
 
         <div class="dev-card">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/206/015/small/developer-working-icon-free-vector.jpg" alt="">
+            <!-- Add pic here -->
+            <img class="profile-pic" src="https://static.vecteezy.com/system/resources/thumbnails/002/206/015/small/developer-working-icon-free-vector.jpg" alt="">
             <p class="roboto-bold" >Jhan Ellen Atole</p>
         </div>
 
         <div class="dev-card">
-            <img src="images/rmorales.jpg" alt="">
+            <img class="profile-pic" src="images/rmorales.jpg" alt="">
             <p class="roboto-bold" >Rolando Morales Jr</p>
         </div>
 
