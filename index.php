@@ -167,7 +167,9 @@
     </div>
 
     <div class="card-containers width-format">
-        <?php showFeatured(); ?>
+        <?php 
+            // showFeatured(); 
+        ?>
     </div>
 </body>
 
@@ -175,34 +177,34 @@
 
 <?php
 
-    function showProducts() {
+    // function showProducts() {
 
-        include("../includes/sqlconnection.php");
+    //     include("../includes/sqlconnection.php");
         
-        $sql = "recheck later"
-        $result = $conn->query($sql);
+    //     $sql = "recheck later"
+    //     $result = $conn->query($sql);
 
-        if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()) {
+    //     if($result->num_rows > 0){
+    //         while($row = $result->fetch_assoc()) {
 
-                // dito mo lalagay sa loob ng echo yung code para sa isang card tas uulitin niya na yan per row product sa sql
+    //             // dito mo lalagay sa loob ng echo yung code para sa isang card tas uulitin niya na yan per row product sa sql
                 
-                echo "
-                    <div class='card custom-card' >
-                        <img class='card-img-top card-img' src='$row[image]' alt='Card image cap'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>$row[prodName]</h5>
-                            <p class='card-text'>$row[description]</p>
-                        </div>
-                    </div>
-                ";
-            }
-        } else {
-            echo "
-                <div></div>
-            ";
-        }
+    //             echo "
+    //                 <div class='card custom-card' >
+    //                     <img class='card-img-top card-img' src='$row[image]' alt='Card image cap'>
+    //                     <div class='card-body'>
+    //                         <h5 class='card-title'>$row[prodName]</h5>
+    //                         <p class='card-text'>$row[description]</p>
+    //                     </div>
+    //                 </div>
+    //             ";
+    //         }
+    //     } else {
+    //         echo "
+    //             <div></div>
+    //         ";
+    //     }
 
-    }
+    // }
 
 ?>
