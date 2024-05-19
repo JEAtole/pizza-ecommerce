@@ -119,7 +119,7 @@
                         <h2 class="modal-title">Checkout</h2>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="placeOrder.php">
                             <div class="form-group">
                                 <input type="text" class="form-control input-lg" placeholder="Enter Your Name" >
                             </div>
@@ -132,11 +132,14 @@
                             <div class="form-group">
                                 <textarea class="form-control" rows="5" style="font-size: 20px; color: gray;" placeholder="Address..." ></textarea>
                             </div>
+                            <div class="form-group">
+                                <center>
+                                   <button class="btn btn-success" type="submit">Place Order</button> 
+                                </center>
+                            </div> 
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal">Submit Order</button>
-                    </div>
+                      
                 </div>
             </div>
         </div>
@@ -209,7 +212,7 @@
             echo $total;
 
         } else {
-            echo "Cart is empty.";
+            echo "0";
         }
 
         $conn->close();
