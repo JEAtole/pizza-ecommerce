@@ -61,7 +61,7 @@
 
         <div class="dev-card">
             <!-- Add pic here -->
-            <img class="profile-pic" src="https://static.vecteezy.com/system/resources/thumbnails/002/206/015/small/developer-working-icon-free-vector.jpg" alt="">
+            <img class="profile-pic" src="images/atole.jpg" alt="">
             <p class="roboto-bold" >Jhan Ellen Atole</p>
         </div>
 
