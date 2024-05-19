@@ -109,14 +109,11 @@
             </ul>
         </div>
     </nav>
+
+    <?php showProduct() ?>
+
     
-    <div class="product-profile width-format">
 
-        <img class="product-image" src="images/pineapple.jpg" alt="">
-
-        <?php showProduct() ?>
-
-    </div>
 
     <br>
     <br>
@@ -167,17 +164,22 @@
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()) {
                 echo "
-                <div class='product-information'>
-                    <h2>$row[prodName]</h2>
-                    <p style='font-size: 1.5em; margin: 0;' >$row[price]</p>
-        
-                    <button class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
-        
-                    <p class='description'>
-                        $row[description]
-                    </p>
+
+                <div class='product-profile width-format'>
+                    <img class='product-image' src='images/$row[pic]' alt=''>
+            
+                    <div class='product-information'>
+                        <h2>$row[prodName]</h2>
+                        <p style='font-size: 1.5em; margin: 0;' >$row[price]</p>
+            
+                        <button class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
+            
+                        <p class='description'>
+                            $row[description]
+                        </p>
+                    </div>
+            
                 </div>
-    
                 ";
             }
         }
