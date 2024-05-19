@@ -93,7 +93,7 @@
 
     </div>
 
-    <div class=" ">
+    <div>
         <p class="top-products merriweather-bold" >Top Products</p>
     </div>
 
