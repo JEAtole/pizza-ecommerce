@@ -187,7 +187,37 @@
         
         <p class="roboto-bold " style="font-size: 2em;" >Sub Total: <?php addTotal(); ?></p>
 
-        <button class="btn btn-success" >Checkout</button>
+        <button class="btn btn-success" data-target="#checkout" data-toggle="modal">Checkout</button>
+
+        <div class="modal fade" id="checkout">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Checkout</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Enter Your Name" >
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control input-lg" placeholder="Enter Your Email" >
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Contact No." >
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" style="font-size: 20px; color: gray;">Address..</textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal">Submit Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </footer>
     
