@@ -112,23 +112,24 @@
 
     <?php showProduct() ?>
 
-    
-
-
     <br>
     <br>
 
     <h2 class="width-format comment-header" >Comments</h2>
-
+    
     <div class="add-comment-wrapper">
         <form action="addComment.php" method="POST">
+            <input type="hidden" name="productID" value="<?php echo $_GET['id'] ?>">
             <textarea name="comment" class=" width-format form-control textarea-comment " rows="3"></textarea>
-            <button type="submit" class="btn btn-primary"  >Add Comment</button>
+            <button type="submit" name="add_comment" class="btn btn-primary"  >Add Comment</button>
         </form>    
     </div>
 
     <div class="comment-list">
-        <div class="comment-card width-format">
+
+        <?php showComments(); ?>    
+
+        <!-- <div class="comment-card width-format">
             <img src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" alt="" width='50' height='50' >
             
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium excepturi reprehenderit rerum omnis provident quod quae, commodi tempore eius? Voluptatibus ut a veritatis neque cumque reiciendis quia quis ea.</p>
@@ -147,7 +148,7 @@
             
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium excepturi reprehenderit rerum omnis provident quod quae, commodi tempore eius? Voluptatibus ut a veritatis neque cumque reiciendis quia quis ea.</p>
 
-        </div>
+        </div> -->
     </div>
 
 
@@ -197,7 +198,7 @@
                         <h2>$row[prodName]</h2>
                         <p style='font-size: 1.5em; margin: 0;' >$row[price]</p>
             
-                        <button class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
+                        <button onclick='addToCart($row[id])' class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
             
                         <p class='description'>
                             $row[description]
@@ -214,6 +215,30 @@
 
         $conn->close();
 
+    }
+
+    function showComments(){
+        include("includes/sqlconnection.php");
+
+        $productId = $_GET['id'];
+        $sql = "SELECT * FROM comments WHERE productID = $productId";
+        $result = $conn->query($sql);
+
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()) {
+                echo "
+                <div class='comment-card width-format'>
+                    <img src='https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png' alt='' width='50' height='50' >
+                    <p>$row[comment]</p>
+                </div>
+                ";
+            }
+        }
+        else {
+            echo "";
+        }
+
+        $conn->close();
     }
 
 ?>
