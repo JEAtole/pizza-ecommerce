@@ -114,16 +114,7 @@
 
         <img class="product-image" src="images/pineapple.jpg" alt="">
 
-        <div class="product-information">
-            <h2>Pepperoni Pizza</h2>
-            <p style="font-size: 1.5em; margin: 0;" >25.6</p>
-
-            <button class="btn btn-primary" style="width:fit-content; margin-left:auto;" >Add to Cart</button>
-
-            <p class="description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quaerat quod nihil beatae explicabo ratione et. Nisi accusamus cumque doloremque voluptatibus. Harum officia, nam neque qui ex perspiciatis error optio.
-            </p>
-        </div>
+        <?php showProduct() ?>
 
     </div>
 
@@ -163,3 +154,39 @@
 
 </body>
 </html>
+
+<?php
+
+    function showProduct() {
+        include("includes/sqlconnection.php");
+
+        $productId = $_GET['id'];
+        $sql = "SELECT * FROM products WHERE id = $productId";
+        $result = $conn->query($sql);
+
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()) {
+                echo "
+                <div class='product-information'>
+                    <h2>$row[prodName]</h2>
+                    <p style='font-size: 1.5em; margin: 0;' >$row[price]</p>
+        
+                    <button class='btn btn-primary' style='width:fit-content; margin-left:auto;' >Add to Cart</button>
+        
+                    <p class='description'>
+                        $row[description]
+                    </p>
+                </div>
+    
+                ";
+            }
+        }
+        else {
+            echo "";
+        }
+
+        $conn->close();
+
+    }
+
+?>
