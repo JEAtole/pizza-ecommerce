@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     
     <style>
 
@@ -166,33 +167,7 @@
     </div>
 
     <div class="card-containers width-format">
-
         <?php showFeatured(); ?>
-        
-        <!-- <div class="card custom-card" >
-            <img class="card-img-top card-img" src="https://cdna.artstation.com/p/assets/images/images/073/563/518/large/thekoswog-1-8.jpg?1709936182" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Pepperoni</h5>
-                <p class="card-text">Some pepperoni content worht 2 lines of description.</p>
-            </div>
-        </div> -->
-
-        <!-- <div class="card custom-card width-format" >
-            <img class="card-img-top card-img" src="https://cdnb.artstation.com/p/assets/images/images/073/563/521/large/thekoswog-1-1.jpg?1709936186" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-
-        <div class="card custom-card width-format" >
-            <img class="card-img-top card-img" src="https://cdna.artstation.com/p/assets/images/images/073/563/524/large/thekoswog-1-7.jpg?1709936196" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div> -->
-
     </div>
 </body>
 
