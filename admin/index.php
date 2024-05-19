@@ -76,6 +76,7 @@
                     <th>Name</th>
                     <th>Description</th>
                     <th>Price</th>
+                    <th>isFeatured</th>
                     <th>Pic</th>
                     <th>Action</th>
                 </tr>
@@ -110,12 +111,13 @@
                         <td>$row[prodName]</td>
                         <td>$row[description]</td>
                         <td>$row[price]</td>
+                        <td>$row[isFeatured]</td>
                         <td>
                             <img src='../images/$row[pic]' width='100' height='100' alt='$row[pic]'>
                         </td>
                         <td>
                             <button class='btn btn-primary'>
-                                <a href='edit.php?id=$row[id]'>Edit</a>
+                                <a href='editProduct.php?id=$row[id]'>Edit</a>
                             </button>
                             <button class='btn btn-danger'>
                                <a href='delete.php?id=$row[id]&pic=$row[pic]'>Delete</a>
@@ -127,6 +129,7 @@
         } else {
                 echo "
                     <tr>
+                        <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>

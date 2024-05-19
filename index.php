@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Portfolio</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="global.css">
@@ -68,7 +68,7 @@
     <nav class="navbar nav-style navbar-fixed-top" >
         <div class="container-fluid width-format" >
             <div class="navbar-header">
-                <a href="#" class="navbar-brand roboto-bold store-name">SampleName</a>
+                <a href="#" class="navbar-brand roboto-bold store-name">TastySlices</a>
             </div>
 
             <ul class="nav navbar-nav navbar-right">
@@ -100,7 +100,7 @@
 
     <div class="card-containers width-format">
 
-        <div class='card custom-card' >
+        <!-- <div class='card custom-card' >
             <img class='card-img-top card-img' src='https://cdna.artstation.com/p/assets/images/images/065/909/460/large/federico-brunetti-margherita.jpg?1691534709' alt='Card image cap'>
             <div class='card-body'>
                 <h5 class='card-title'>Normal Pizza</h5>
@@ -122,10 +122,10 @@
                 <h5 class='card-title'>Normal Pizza</h5>
                 <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
             </div>
-        </div>
+        </div> -->
         
         <?php 
-            // showFeatured(); 
+            showFeatured(); 
         ?>
     </div>
 </body>
@@ -134,34 +134,34 @@
 
 <?php
 
-    // function showProducts() {
+    function showFeatured() {
 
-    //     include("../includes/sqlconnection.php");
+        include("includes/sqlconnection.php");
         
-    //     $sql = "recheck later"
-    //     $result = $conn->query($sql);
+        $sql = "SELECT * FROM products WHERE isFeatured='1'";
+        $result = $conn->query($sql);
 
-    //     if($result->num_rows > 0){
-    //         while($row = $result->fetch_assoc()) {
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()) {
 
-    //             // dito mo lalagay sa loob ng echo yung code para sa isang card tas uulitin niya na yan per row product sa sql
+                // dito mo lalagay sa loob ng echo yung code para sa isang card tas uulitin niya na yan per row product sa sql
                 
-    //             echo "
-    //                 <div class='card custom-card' >
-    //                     <img class='card-img-top card-img' src='$row[image]' alt='Card image cap'>
-    //                     <div class='card-body'>
-    //                         <h5 class='card-title'>$row[prodName]</h5>
-    //                         <p class='card-text'>$row[description]</p>
-    //                     </div>
-    //                 </div>
-    //             ";
-    //         }
-    //     } else {
-    //         echo "
-    //             <div></div>
-    //         ";
-    //     }
+                echo "
+                    <div class='card custom-card' >
+                        <img class='card-img-top card-img' src='images/$row[pic]' alt='Card image cap'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>$row[prodName]</h5>
+                            <p class='card-text'>$row[description]</p>
+                        </div>
+                    </div>
+                ";
+            }
+        } else {
+            echo "
+                <div></div>
+            ";
+        }
 
-    // }
+    }
 
 ?>
