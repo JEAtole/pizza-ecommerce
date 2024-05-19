@@ -18,19 +18,18 @@
         }
 
         .card-container {
-            background: #cbf6d9;
-            /* height: 300px; */
             margin: auto;
-            border-radius: 20px;
+            border-radius: 20px ;
             padding: 20px;
             display: flex;
             flex-direction: row;
             gap: 20px;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .custom-card {
-            width: 300px;
+            width: 250px;
         }
 
     </style>
@@ -52,11 +51,9 @@
         </div>
     </nav>
 
-    <div >
-        <p class="featured merriweather-bold" style="margin-top: 70px;" >Featured</p>
-    </div>
+    <p class="featured merriweather-bold" style="margin-top: 70px;" >Featured</p>
 
-    <div class="width-format card-container" >
+    <div class="width-format card-container" style="background: #cbf6d9" >
 
         <div class='card custom-card' >
             <img class='card-img-top card-img' src='https://cdna.artstation.com/p/assets/images/images/065/909/460/large/federico-brunetti-margherita.jpg?1691534709' alt='Card image cap'>
@@ -84,7 +81,43 @@
         
     </div>
 
+    <p class="featured merriweather-bold" style="margin-top: 70px;" >All Products</p>
 
+    <div class="width-format card-container" >
+        <div class='card custom-card' >
+            <img class='card-img-top card-img' src='https://cdna.artstation.com/p/assets/images/images/065/909/460/large/federico-brunetti-margherita.jpg?1691534709' alt='Card image cap'>
+            <div class='card-body'>
+                <h5 class='card-title'>Normal Pizza</h5>
+                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
+            </div>
+        </div>
+        
+        <div class='card custom-card' >
+            <img class='card-img-top card-img' src='https://cdna.artstation.com/p/assets/images/images/065/909/460/large/federico-brunetti-margherita.jpg?1691534709' alt='Card image cap'>
+            <div class='card-body'>
+                <h5 class='card-title'>Normal Pizza</h5>
+                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
+            </div>
+            <button href="#" class="btn btn-primary">Add to cart</button>
+        </div>
+
+        <div class='card custom-card' >
+            <img class='card-img-top card-img' src='https://cdna.artstation.com/p/assets/images/images/065/909/460/large/federico-brunetti-margherita.jpg?1691534709' alt='Card image cap'>
+            <div class='card-body'>
+                <h5 class='card-title'>Normal Pizza</h5>
+                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
+            </div>
+        </div>
+
+        <div class='card custom-card' >
+            <img class='card-img-top card-img' src='https://cdna.artstation.com/p/assets/images/images/065/909/460/large/federico-brunetti-margherita.jpg?1691534709' alt='Card image cap'>
+            <div class='card-body'>
+                <h5 class='card-title'>Normal Pizza</h5>
+                <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi, sunt a, inventore voluptates odio dignissimos temporibus facere, saepe commodi repudiandae similique modi! Itaque perferendis accusamus delectus magni nisi quos? </p>
+            </div>
+        </div>
+    </div>
+    
 
 </body>
 </html>
